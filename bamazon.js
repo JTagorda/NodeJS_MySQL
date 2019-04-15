@@ -28,12 +28,12 @@ function start (){
 function askQuestions() {
     inquirer.prompt([
         {
-            message: "Please type in the product id you would like to order.",
+            message: "Please type in the product ID you would like to order.",
             type: "input",
             name: "prodId"
         },
         {
-            message: "how many of this item would you like to purchase",
+            message: "How many of this item would you like to purchase",
             type: "input",
             name: "prodQty"
         }
@@ -60,7 +60,7 @@ function withdrawProd(prodId, prodQty) {
         orderComplete(prod, prodId, prodQty)
         connection.end()
       }else{
-        console.log("sorry the order has been cancled, there was insuffecent stock of this purchase")
+        console.log("Insufficient stock. Your order has been cancelled.")
         connection.end()
       }
   })
